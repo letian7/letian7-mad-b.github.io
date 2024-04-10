@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Tips and Tricks</title>
+<link rel="stylesheet" href="styles.css">    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+         img {
+position: absolute; 
+right: 300px;  
+         
+ width: 500px; 
+            height: auto; 
+        }      
+ body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .sidebar {
+            position: fixed; 
+            top: 0;
+            left: 0;
+            height: 100%; 
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            padding-top: 20px;
+            overflow-y: auto; 
+        }
+
+                .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #555; 
+        }
+
+       
+        .main-content {
+            margin-left: 270px; 
+            padding: 20px;
+        }
+ .start-button {
+            padding: 20px 40px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="sidebar">
+        <div class="logo center-align">
+            <h5><i class="fab fa-tiktok"></i> TikTok</h5>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input" placeholder="Search...">
+            <button id="search-button" class="search-button">Search</button>
+        </div>
+        <a href="how.html" target="_blank">How to Create Engaging Content</a>
+        <a href="opt.html" target="_blank">Optimizing Hashtags for Visibility</a>
+        <a href="effective.html" target="_blank">Effective Video Editing Techniques</a>
+        <a href="base.html" target="_blank">Growing Your Follower Base</a>
+            </div>
+
+  
+
+    <div class="main-content">
+        <div class="container">
+            <h2>Welcome to "TikTok Tips and Tricks"!</h2>
+            <p>Our website is your ultimate destination for all things TikTok. Whether you're a seasoned TikTok creator or just starting out, we've got you covered with the latest tips, strategies, and trends to take your TikTok game to the next level.</p>
+            <p>From mastering viral dances to optimizing your hashtags for maximum visibility, our comprehensive guides and tutorials will help you navigate the world of TikTok with ease. Explore our curated content to discover effective video editing techniques, learn how to engage your audience, and grow your follower base like never before.</p>
+            <p>Join our community of TikTok enthusiasts and unlock the secrets to success on the world's fastest-growing social media platform. Let's dive in and unleash your TikTok potential together!</p>
+            <button class="start-button" onclick="redirectToPage()">Start</button
+
+        </div>
+    </div>
+
+<img src="2.png" alt="Description of the image">
+
+
+    <script>
+        
+        document.getElementById("search-button").addEventListener("click", function() {
+            var searchInput = document.getElementById("search-input").value.toLowerCase();
+            var links = document.querySelectorAll('.sidebar a'); 
+            links.forEach(function(link) {
+                var linkText = link.textContent.toLowerCase(); 
+                if (linkText.includes(searchInput)) { 
+                    window.open(link.getAttribute('href'), '_blank'); 
+                }
+            });
+        });
+function redirectToPage() {
+            var targetFilePath = "how.html";
+             window.location.href = targetFilePath;
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+
